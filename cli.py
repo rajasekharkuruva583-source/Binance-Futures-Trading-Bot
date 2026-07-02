@@ -2,9 +2,10 @@ from app.constants import BUY, SELL, MARKET, LIMIT
 
 
 def display_menu():
-    print("\n" + "=" * 50)
-    print("      Binance Futures Trading Bot")
-    print("=" * 50)
+
+    print("\n" + "=" * 60)
+    print("        BINANCE FUTURES TRADING BOT")
+    print("=" * 60)
 
     print("1. Place Market Order")
     print("2. Place Limit Order")
@@ -104,41 +105,52 @@ def confirm_order():
 #------- Display Order Summary -----
 
 def display_order_summary(data):
-    """
-    Display order details before confirmation.
-    """
 
-    print("\nOrder Summary")
-    print("-" * 40)
+    print("\n" + "=" * 50)
+    print("             ORDER SUMMARY")
+    print("=" * 50)
 
     for key, value in data.items():
-        print(f"{key:12}: {value}")
+        print(f"{key.replace('_', ' ').title():18}: {value}")
+
+    print("=" * 50)
 
 
 #-------- Display Order Result----
 
 def display_order_result(response):
     """
-    Display order response from Binance.
+    Display Binance order response.
     """
 
-    print("\n" + "=" * 40)
-    print(" Order Placed Successfully ")
-    print("=" * 40)
+    print("\n" + "=" * 50)
+    print("        ORDER PLACED SUCCESSFULLY")
+    print("=" * 50)
 
-    print(f"Order ID      : {response.get('orderId')}")
-    print(f"Status        : {response.get('status')}")
-    print(f"Symbol        : {response.get('symbol')}")
-    print(f"Side          : {response.get('side')}")
-    print(f"Executed Qty  : {response.get('executedQty')}")
-    print(f"Price         : {response.get('price', 'Market Price')}")
+    print(f"Order ID        : {response.get('orderId')}")
+    print(f"Client Order ID : {response.get('clientOrderId')}")
+    print(f"Status          : {response.get('status')}")
+    print(f"Symbol          : {response.get('symbol')}")
+    print(f"Side            : {response.get('side')}")
+    print(f"Order Type      : {response.get('type')}")
+    print(f"Quantity        : {response.get('origQty')}")
+    print(f"Executed Qty    : {response.get('executedQty')}")
+    print(f"Price           : {response.get('price')}")
+    print(f"Time In Force   : {response.get('timeInForce')}")
+
+    print("=" * 50)
 
 #---- Display Error -------
 
 def display_error(error):
+    """
+    Display error message.
+    """
 
-    print("\n" + "=" * 40)
-    print(" ORDER FAILED ")
-    print("=" * 40)
+    print("\n" + "=" * 50)
+    print("            ORDER FAILED")
+    print("=" * 50)
 
     print(f"Reason : {error}")
+
+    print("=" * 50)

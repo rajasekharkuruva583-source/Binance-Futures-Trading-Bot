@@ -19,3 +19,71 @@
 2026-07-02 18:01:29,004 | INFO | Order placed successfully
 2026-07-02 18:07:39,234 | INFO | Placing MARKET order
 2026-07-02 18:07:40,142 | INFO | Order placed successfully
+2026-07-02 18:40:19,806 | INFO | Placing MARKET order
+2026-07-02 18:40:20,667 | INFO | Order placed successfully
+2026-07-02 18:52:50,614 | INFO | ============================================================
+2026-07-02 18:52:50,614 | INFO | REQUEST
+2026-07-02 18:52:50,614 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 18:52:50,614 | INFO | Symbol   : BTCUSDT
+2026-07-02 18:52:50,615 | INFO | Side     : BUY
+2026-07-02 18:52:50,615 | INFO | Type     : LIMIT
+2026-07-02 18:52:50,615 | INFO | Quantity : 0.001
+2026-07-02 18:52:50,615 | INFO | Price    : 0.001
+2026-07-02 18:52:51,335 | ERROR | ============================================================
+2026-07-02 18:52:51,335 | ERROR | BINANCE API ERROR
+2026-07-02 18:52:51,336 | ERROR | {"code":-1111,"msg":"Precision is over the maximum defined for this asset."}
+2026-07-02 18:52:51,336 | ERROR | ============================================================
+2026-07-02 18:53:58,825 | INFO | ============================================================
+2026-07-02 18:53:58,826 | INFO | REQUEST
+2026-07-02 18:53:58,826 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 18:53:58,826 | INFO | Symbol   : BTCUSDT
+2026-07-02 18:53:58,826 | INFO | Side     : BUY
+2026-07-02 18:53:58,826 | INFO | Type     : MARKET
+2026-07-02 18:53:58,826 | INFO | Quantity : 0.001
+2026-07-02 18:53:59,559 | INFO | RESPONSE
+2026-07-02 18:53:59,559 | INFO | {"orderId":18491000829,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"mv3Sk5KNpgtdrShn4gCL35","price":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1782998640786}
+2026-07-02 18:53:59,559 | INFO | ============================================================
+2026-07-02 18:55:11,854 | INFO | ============================================================
+2026-07-02 18:55:11,855 | INFO | REQUEST
+2026-07-02 18:55:11,855 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 18:55:11,855 | INFO | Symbol   : BTCUSDT
+2026-07-02 18:55:11,855 | INFO | Side     : BUY
+2026-07-02 18:55:11,855 | INFO | Type     : MARKET
+2026-07-02 18:55:11,855 | INFO | Quantity : 0.001
+2026-07-02 18:55:12,672 | INFO | RESPONSE
+2026-07-02 18:55:12,672 | INFO | {"orderId":18491213202,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"PGsIXppngmugm5w15FV6yy","price":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1782998713886}
+2026-07-02 18:55:12,673 | INFO | ============================================================
+2026-07-02 20:17:33,256 | INFO | Fetching Account Information...
+2026-07-02 20:17:34,588 | INFO | Account Information Retrieved Successfully.
+2026-07-02 20:40:17,408 | INFO | ============================================================
+2026-07-02 20:40:17,409 | INFO | REQUEST
+2026-07-02 20:40:17,409 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 20:40:17,409 | INFO | Symbol   : BTCUSDT
+2026-07-02 20:40:17,409 | INFO | Side     : BUY
+2026-07-02 20:40:17,410 | INFO | Type     : MARKET
+2026-07-02 20:40:17,410 | INFO | Quantity : 0.001
+2026-07-02 20:40:18,538 | INFO | RESPONSE
+2026-07-02 20:40:18,538 | INFO | {"orderId":18507902932,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"omvVKgJvBpxlTiNp4wOwhN","price":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1783005018132}
+2026-07-02 20:40:18,538 | INFO | ============================================================
+2026-07-02 20:56:21,525 | INFO | ============================================================
+2026-07-02 20:56:21,525 | INFO | REQUEST
+2026-07-02 20:56:21,525 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 20:56:21,525 | INFO | Symbol   : BTCUSDT
+2026-07-02 20:56:21,525 | INFO | Side     : BUY
+2026-07-02 20:56:21,526 | INFO | Type     : MARKET
+2026-07-02 20:56:21,526 | INFO | Quantity : 0.001
+2026-07-02 20:56:22,886 | INFO | RESPONSE
+2026-07-02 20:56:22,886 | INFO | {"orderId":18510446841,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"yScnobRa5cJyQvKugBgvwe","price":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1783005982514}
+2026-07-02 20:56:22,886 | INFO | ============================================================
+2026-07-02 21:03:40,120 | INFO | ============================================================
+2026-07-02 21:03:40,120 | INFO | REQUEST
+2026-07-02 21:03:40,121 | INFO | Endpoint : POST /fapi/v1/order
+2026-07-02 21:03:40,121 | INFO | Symbol   : BTCUSDT
+2026-07-02 21:03:40,121 | INFO | Side     : BUY
+2026-07-02 21:03:40,121 | INFO | Type     : LIMIT
+2026-07-02 21:03:40,121 | INFO | Quantity : 0.001
+2026-07-02 21:03:40,121 | INFO | Price    : 50000.0
+2026-07-02 21:03:40,863 | INFO | RESPONSE
+2026-07-02 21:03:40,864 | INFO | {"orderId":18511572486,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"8hnILrfORBPlR3MFHDCq3s","price":"50000.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"BUY",
+                                                        "positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1783006420481}
+2026-07-02 21:03:40,864 | INFO | ============================================================

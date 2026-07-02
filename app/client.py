@@ -14,9 +14,8 @@ from app.exceptions import BinanceAPIException
 
 def get_headers():
     """
-    Return Binance authentication headers.
+    Returns authentication headers required by Binance.
     """
-
     return {
         "X-MBX-APIKEY": API_KEY
     }
@@ -24,27 +23,27 @@ def get_headers():
 
 def get_server_time():
     """
-    Fetch Binance server time.
+    Fetch Binance Futures server time.
     """
 
-    logger.info("Fetching Binance server time...")
+    logger.info("Fetching Binance Server Time...")
 
     url = f"{BASE_URL}/fapi/v1/time"
 
     response = requests.get(url)
 
     if response.status_code != 200:
-
         logger.error(response.text)
         raise BinanceAPIException(response.text)
 
+    logger.info("Server Time Retrieved Successfully.")
+
     return response.json()
 
-# ---- Account info ---------
 
 def get_account_info():
     """
-    Fetch Futures account information.
+    Fetch Binance Futures account information.
     """
 
     timestamp = int(time.time() * 1000)
@@ -61,7 +60,7 @@ def get_account_info():
         f"{query_string}&signature={signature}"
     )
 
-    logger.info("Requesting account information")
+    logger.info("Fetching Account Information...")
 
     response = requests.get(
         url,
@@ -69,24 +68,23 @@ def get_account_info():
     )
 
     if response.status_code != 200:
-    
-            logger.error(response.text)
-            raise BinanceAPIException(response.text)
+        logger.error(response.text)
+        raise BinanceAPIException(response.text)
 
-    logger.info("Account information received")
+    logger.info("Account Information Retrieved Successfully.")
 
     return response.json()
 
-#---------
+
 def place_order(
     symbol: str,
     side: str,
     order_type: str,
     quantity: float,
-    price: float = None
+    price: float = None,
 ):
     """
-    Place an order on Binance Futures.
+    Place MARKET or LIMIT order on Binance Futures.
     """
 
     timestamp = int(time.time() * 1000)
@@ -104,7 +102,8 @@ def place_order(
         params["timeInForce"] = "GTC"
 
     query_string = "&".join(
-        f"{key}={value}" for key, value in params.items()
+        f"{key}={value}"
+        for key, value in params.items()
     )
 
     signature = generate_signature(
@@ -117,18 +116,46 @@ def place_order(
         f"{query_string}&signature={signature}"
     )
 
-    logger.info(f"Placing {order_type} order")
+    # -------------------------------
+    # Request Logging
+    # -------------------------------
+    logger.info("=" * 60)
+    logger.info("REQUEST")
+    logger.info("Endpoint : POST /fapi/v1/order")
+    logger.info(f"Symbol   : {symbol}")
+    logger.info(f"Side     : {side}")
+    logger.info(f"Type     : {order_type}")
+    logger.info(f"Quantity : {quantity}")
 
+    if price is not None:
+        logger.info(f"Price    : {price}")
+
+    # -------------------------------
+    # Send Request
+    # -------------------------------
     response = requests.post(
         url,
         headers=get_headers()
     )
 
+    # -------------------------------
+    # Error Handling
+    # -------------------------------
     if response.status_code != 200:
-    
-            logger.error(response.text)
-            raise BinanceAPIException(response.text)
 
-    logger.info("Order placed successfully")
+        logger.error("=" * 60)
+        logger.error("BINANCE API ERROR")
+        logger.error(response.text)
+        logger.error("=" * 60)
+
+        raise BinanceAPIException(response.text)
+
+    # -------------------------------
+    # Response Logging
+    # -------------------------------
+    logger.info("RESPONSE")
+    logger.info(response.text)
+    logger.info("=" * 60)
 
     return response.json()
+
