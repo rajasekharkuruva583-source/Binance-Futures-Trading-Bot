@@ -331,7 +331,7 @@ Add screenshots for the following sections.
 
 ### 4. MARKET Order
 
-![Market Order](screenshots/market_order.png)
+![Market Order](screenshots/market_order_input.png)
 
 ### 5. Successful Market Order Response
 
@@ -340,7 +340,7 @@ Add screenshots for the following sections.
 
 ### 6. LIMIT Order
 
-![Limit Order](screenshots/limit_order.png)
+![Limit Order](screenshots/limit_order_input.png)
 
 
 ### 7. Successful Limit Order Response
