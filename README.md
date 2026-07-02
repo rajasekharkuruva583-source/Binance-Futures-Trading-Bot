@@ -394,7 +394,7 @@ Rajasekhar Kuruva
 Python Backend Developer
 
 GitHub:
-https://github.com/your-username
+https://github.com/rajasekharkuruva583-source
 
 LinkedIn:
 https://www.linkedin.com/in/rajasekhar-kuruva-ba94352aa
