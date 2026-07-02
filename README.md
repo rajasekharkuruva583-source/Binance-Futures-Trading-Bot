@@ -316,70 +316,43 @@ Add screenshots for the following sections.
 
 ### 1. Project Folder Structure
 
-Example
 
-```
 ![Project Structure](screenshots/project_structure.png)
-```
 
----
 
 ### 2. Binance Demo Trading Dashboard
 
-```
 ![Binance Dashboard](screenshots/binance_dashboard.png)
-```
 
----
 
 ### 3. Account Information
 
-```
 ![Account Information](screenshots/account_information.png)
-```
-
----
 
 ### 4. MARKET Order
 
-```
 ![Market Order](screenshots/market_order.png)
-```
+
 ### 5. Successful Market Order Response
 
-```
 ![Market Order Success](screenshots/market_order_success.png)
-```
 
 
 ### 6. LIMIT Order
 
-```
 ![Limit Order](screenshots/limit_order.png)
-```
+
 
 ### 7. Successful Limit Order Response
 
-```
 ![Limit Order Success](screenshots/limit_order_success.png)
-```
 
 
 ### 8. Validation Error
 
-```
 ![Validation Error](screenshots/validation_error.png)
-```
 
----
 
-### 8. Log File
-
-```
-screenshots/log_file.png
-```
-
----
 
 ## Future Enhancements
 
